@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Playlist Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-mode">
+    <h1 class="homepage-title ">Spotify Playlist Manager</h1>
+    <div id="login-container">
+        
+        <button id="login-button" onclick="login()">Login with Spotify</button>
+    </div>
+    <div id="playlist-container" class="grid-container"></div>
+    <div id="tracks-container" style="display: none;">
+      
+        <div id="playlist-1" class="track-list">
+            <div id="playlist-1-title" class="playlist-subtitle"></div>
+            <div class="songs-container"></div> 
+        </div>
+        
+        <div id="playlist-2" class="track-list">
+            <div id="playlist-2-title" class="playlist-subtitle"></div>
+            <div class="songs-container"></div>
+        </div>
+    </div>
+    <button id="confirm-button" onclick="confirmSelection()" style="display: none;">Confirm Selected Playlists</button>
+    <button id="update-button" onclick="updatePlaylists()" style="display: none;">Confirm Changes</button>
+    <script src="script.js"></script>
+</body>
+</html>

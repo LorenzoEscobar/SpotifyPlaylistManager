@@ -1,0 +1,145 @@
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#update-button,
+#confirm-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+    bottom: 20px;
+}
+
+#update-button,
+#login-button,
+#confirm-button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #1DB954;
+    color: #ffffff;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.playlist-card {
+    background-color: #242424;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.playlist-card:hover {
+    transform: scale(1.05);
+}
+
+.playlist-card.selected {
+    border: 3px solid #1DB954;
+}
+
+.playlist-image {
+    width: 100%;
+}
+
+.playlist-title {
+    padding: 10px;
+    margin-bottom: 5px;
+    text-align: justify;
+    
+}
+
+.playlist-subtitle {   /* Needs fix*/
+    padding: 10px; 
+    text-align: center; 
+    font-weight: bold;
+    z-index: 9999; 
+    position: relative;
+    color: yellowgreen;
+}
+
+.track-list {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin: 8%;
+    border: 2px solid #1DB954;
+    border-radius: 10px;
+    overflow: auto;
+    max-height: 80vh;
+    padding-bottom: 1px; 
+}
+
+.track-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    cursor: move;
+}
+
+.track-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.track-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.no-preview-tooltip {
+    position: fixed;
+    background: #ffffff;
+    color: #710202;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+    75% { transform: rotate(-2deg); }
+    100% { transform: rotate(2deg); }
+  }
+  
+  .wiggling {
+    animation: wiggle 0.9s infinite;
+  }
+
+  .homepage-title{ 
+    margin: 0;  
+    padding: 10px;
+    text-align: center; 
+    color: #fbfffdea;
+  }
