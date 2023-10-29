@@ -1,5 +1,5 @@
 const clientId = '9f4c06dcbc5f42dfac632c2d9b02db36';
-const redirectUri = 'https://playlistmanager.ddns.net/';
+const redirectUri = 'http://playlistmanager.ddns.net/';
 let accessToken;
 let selectedPlaylists = [];
 let currentPlaylistTracks = [{}, {}];
