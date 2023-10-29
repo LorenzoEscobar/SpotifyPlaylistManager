@@ -12,4 +12,4 @@ You can also hover over a song in your playlist to quickly listen to it. This to
 
 
 
-## Contact LE.LorenzoEscobar@gmail.com for any assistance or questions! ## Send me your email you use for spotify if you wish to be whitelisted and you may use my server instead of hosting locally.
+## Contact LE.LorenzoEscobar@gmail.com for any assistance or questions! Send me your email you use for spotify if you wish to be whitelisted and you may use my server instead of hosting locally.
