@@ -17,6 +17,7 @@ function login() {
     window.location = authUrl;
 }
 
+// Function to retrieve user's playlists using Spotify API
 async function fetchPlaylists() {
     const response = await fetch('https://api.spotify.com/v1/me/playlists', {
         headers: {
@@ -41,7 +42,7 @@ function displayPlaylists(playlists) {
             <img src="${playlist.images[0].url}" alt="${playlist.name}" class="playlist-image" />
             <div class="playlist-title">${playlist.name}</div>
         `;
-        card.addEventListener('click', () => toggleSelection(playlist, card));
+        card.addEventListener('click', () => toggleSelection(playlist, card)); //click event listener to toggle selection of playlists
         container.appendChild(card);
     });
 }
@@ -51,7 +52,7 @@ function toggleSelection(playlist, card) {
         selectedPlaylists = selectedPlaylists.filter(item => item !== playlist);
         card.classList.remove('selected');
     } else {
-        if (selectedPlaylists.length < 2) {
+        if (selectedPlaylists.length < 2) { // Limit to 2 playlists
             selectedPlaylists.push(playlist);
             card.classList.add('selected');
         } else {
@@ -108,9 +109,9 @@ function renderTracks(tracks, index) {
             item.addEventListener('mouseover', () => audio.play());
             item.addEventListener('mouseout', () => audio.pause());
             item.addEventListener('dragstart', (e) => handleDragStart(e, track, index, audio));
-        } else {
-            let tooltip;
-            item.addEventListener('mouseover', (e) => {
+        } else { 
+            let tooltip;   // Showing tooltip if no track preview is available
+            item.addEventListener('mouseover', (e) => {  
                 tooltip = document.createElement('div');
                 tooltip.className = 'no-preview-tooltip';
                 tooltip.textContent = 'No Preview';
@@ -267,7 +268,7 @@ async function removeTracksFromPlaylist(playlistId, uris) {
 }
 
 
-window.addEventListener('load', () => {
+window.addEventListener('load', () => { 
     const hash = window.location.hash
         .substring(1)
         .split('&')
@@ -277,8 +278,8 @@ window.addEventListener('load', () => {
             return initial;
         }, {});
     accessToken = hash.access_token;
-    if (accessToken) {
-        document.getElementById('login-container').style.display = 'none';
+    if (accessToken) {  // Hide login if token is present
+        document.getElementById('login-container').style.display = 'none'; 
         fetchPlaylists();
     }
 });
